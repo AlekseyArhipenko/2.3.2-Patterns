@@ -1,4 +1,4 @@
-package ru.netology.Data;
+package ru.netology.data;
 
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
@@ -6,16 +6,12 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Value;
 
 import java.util.Locale;
 
 import static io.restassured.RestAssured.given;
 
-@Data
-@AllArgsConstructor
 public class DataGenerator {
     private static final RequestSpecification requestSpec = new RequestSpecBuilder()
             .setBaseUri("http://localhost")

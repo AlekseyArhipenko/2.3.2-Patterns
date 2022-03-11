@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static ru.netology.Data.DataGenerator.*;
-import static ru.netology.Data.DataGenerator.Registration.getRegisteredUser;
-import static ru.netology.Data.DataGenerator.Registration.getUser;
+import static ru.netology.data.DataGenerator.*;
+import static ru.netology.data.DataGenerator.Registration.getRegisteredUser;
+import static ru.netology.data.DataGenerator.Registration.getUser;
 
 public class AuthTest {
 
@@ -30,7 +30,7 @@ public class AuthTest {
     }
 
     @Test
-    @DisplayName("Should get error message if login with not registered user") //если юзера нет (логина нет)
+    @DisplayName("Should get error message if login with not registered user")
     void shouldGetErrorIfNotRegisteredUser() {
         var notRegisteredUser = getUser("active");
         $("[data-test-id=login] .input__control").setValue(notRegisteredUser.getLogin());
